@@ -1,5 +1,5 @@
-// Importamos el model
-import getProductModel from '../../models/products/getProductModel.js';
+// Importamos el modelo
+const getProductModel = require('../../models/products/getProductModel.js');
 
 // Creamos la función del controlador
 const getProductController = async (req, res, next) => {
@@ -9,7 +9,7 @@ const getProductController = async (req, res, next) => {
         // Devolvemos el producto
         res.send({
             status: product.length > 0 ? 'ok' : 'Error',
-            // Funcion ternaria que devuelve el producto o un mensaje de que no existe el producto en caso de que venga un array vacio
+            // Función ternaria que devuelve el producto o un mensaje de que no existe el producto en caso de que venga un array vacío
             data: product.length > 0 ? product[0] : 'No existe ese producto',
         });
     } catch (err) {
@@ -18,4 +18,4 @@ const getProductController = async (req, res, next) => {
     }
 };
 
-export default getProductController;
+module.exports = getProductController;

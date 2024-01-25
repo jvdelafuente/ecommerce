@@ -1,4 +1,5 @@
-import getFavModel from '../../models/favorites/getFavModel.js';
+// Importamos el modelo
+const getFavModel = require('../../models/favorites/getFavModel.js');
 
 const getFavController = async (req, res) => {
     try {
@@ -17,4 +18,4 @@ const getFavController = async (req, res) => {
     }
 };
 
-export default getFavController;
+module.exports = getFavController;

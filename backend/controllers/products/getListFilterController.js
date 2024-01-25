@@ -1,4 +1,4 @@
-import getListProductsFilterModel from '../../models/products/getListProductsFilterModel.js';
+const getListProductsFilterModel = require('../../models/products/getListProductsFilterModel.js');
 
 const getListProductsFilterController = async (req, res, next) => {
     try {
@@ -25,4 +25,4 @@ const getListProductsFilterController = async (req, res, next) => {
     }
 };
 
-export default getListProductsFilterController;
+module.exports = getListProductsFilterController;
