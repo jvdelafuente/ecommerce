@@ -2,7 +2,6 @@
 const express = require('express');
 const router = express.Router();
 
-
 // Importamos las funciones controladoras intermedias.
 const { authUserController } = require('../middlewares/index');
 
@@ -29,11 +28,5 @@ router.get('/users', authUserController, getUserController);
 
 // actualizar info de ususario
 router.put('/users/:userId/profile', authUserController, updateProfileController)
-
-// Devuelve la informacion publica de un user y sus notas.
-router.get('/users/:userId', authUserController, getPublicUserController)
-
-
-
 
 module.exports = router
