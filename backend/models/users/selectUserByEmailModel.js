@@ -13,7 +13,7 @@ const selectUserByEmailModel = async (email) => {
 
         // Localizamos el usuaruo con el email dado.
         const [users] = await connection.query(
-        `SELECT id, password, role FROM users WHERE email = ?`,
+        `SELECT id, password FROM users WHERE email = ?`,
         [email]
 );
 
